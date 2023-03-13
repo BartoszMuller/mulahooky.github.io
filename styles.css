@@ -1,0 +1,593 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+} 
+
+html {
+  font-size: calc(13px + 0.390625vw);
+  scroll-behavior: smooth;
+}
+body {
+  overflow-y: scroll; 
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera 
+body::-webkit-scrollbar {
+  display: none;
+} */
+
+/* Hide scrollbar for IE, Edge and Firefox 
+body {
+
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+ 
+}*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #9b9b9b;
+  border-radius: 150px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.centred{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* ----------------------------------------*/
+/* Main */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  
+  width:100%;
+
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+  .container > div{
+    width: 100%;
+    min-height: 100svh;
+    scroll-snap-align: center;
+  }
+
+
+
+/* --------- HOME -------- */
+
+#home-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: url("/images/strlokbk.png") no-repeat center center fixed;
+  background-size: cover;
+  
+  
+  color: #fafafa;
+  font-family: 'Lora';
+
+}
+    
+    .home-center{
+      display: flex;
+      
+      margin-top:5rem;
+      margin-left: 0;
+      
+
+
+
+      /*box-shadow: -1px 2px 10px 7px #121212ba;
+      background-color: #1e1e1e7d;*/
+    
+    }
+      .home-rt{
+        width: 4.2rem;
+        height: max-content;
+
+        margin-right: 2rem;
+        
+        font-size: 2.5rem;
+        line-height: 1.28em;
+
+        background-color: #fafafa;
+      }
+
+      .home-center-content{
+        display: flex;
+        flex-direction: column;
+      }
+
+        .home-center-title{
+          display: flex;
+          flex-direction: column;
+          width: max-content;
+
+          font-size: 2.5rem;
+          font-weight: 500;
+          letter-spacing: 0.6em;
+          line-height: 1.5em;
+
+        }
+            .white-bg{
+              display: flex;
+              flex-direction: column;
+              height: max-content;
+              
+              position:absolute;
+
+              margin-left:-0.2em;
+              padding-left: 0.2em;
+
+              line-height: 1.28em;
+
+              color: #2f2f2f;
+              background-color: #fafafa;
+            }
+              .home-info{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                font-size: 1.2rem;
+                font-weight: 400;
+                letter-spacing: 0.3em;
+                line-height: 1.6em;
+
+                opacity:0;
+                height: 0;
+                
+                transition: height 0.7s, opacity 0.3s;
+              }
+
+                    .white-bg .active{
+        
+                      opacity: 100;
+                      height: 8rem;
+                      transition: height 0.8s, opacity 0.6s ease-in;
+                      
+                    }
+
+        .home-center-text{
+          display: flex;
+          text-align: justify;
+
+          width: 76%;
+
+          margin-top:1.8rem;
+          margin-bottom:5.5rem;
+          
+          font-size: 0.76rem;
+          font-weight: 400;
+          letter-spacing: 0.1em;
+          line-height: 1.2rem;
+
+        }
+                .home-center-text > div {
+                  display: flex;
+                  flex-direction: column;
+                  flex-grow:1;
+                  gap:3.5rem;
+
+                  width: 0;
+                  height: auto;
+                }
+
+        .home-kontakt{
+          display: flex;
+          align-items: center;
+
+          font-family: 'Sarabun';
+        }
+
+          .kontakt-text{
+            display: flex;
+            align-items: center;
+
+            margin:auto;
+          }
+              .kontakt-line{
+                width: 0.17rem;
+                
+                font-size: 2rem;
+                line-height: 1.28em;
+        
+                background-color: #fafafa
+              }
+              
+              .kontakt-st{
+                margin-left: 1.2rem;
+
+                font-weight: 500;
+              }
+
+    .button{
+      padding: 0.9rem 1.3rem;
+      font-size:0.9rem;
+      font-weight: 400;
+      font-family: 'Sarabun', sans-serif;
+    }
+
+        .btn-kontakt{
+          cursor: pointer;
+
+          padding: 1rem 1.5rem;
+
+          border: 0.08em solid white;  
+          color: white;
+          background-color: #16181D;
+        }
+
+        .btn-home{  
+          padding: 0.85rem 1.5rem;
+
+          cursor: default;
+
+          color: #1e1e1e;
+          background-color: #fafafa;
+        }
+
+
+    .home-bottom{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+      .nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1.2rem auto;
+      gap:2.4rem;
+      }
+      .nav .button{
+        font-size: 0.86rem;
+        font-weight: 500;
+      }
+    .home-bottom-line{
+      width: 100%;
+
+      border-top: 0.2em solid #fafafa89;
+
+    }
+
+    .bottom-end{
+      flex-direction: column;
+
+      width: 100%;
+      height: max-content;
+
+      padding-top: 1.2rem;
+
+      background-color: #fafafa10;
+      backdrop-filter: blur(1px);
+    }
+
+        .arrow-title{
+            display: flex;
+            align-items: center;
+            width: max-content;
+            
+            font-size: 1.26rem;
+            font-weight: 400;
+            border-radius: 2000px;
+            letter-spacing: 0.05em;
+
+            color:#ffffff;   
+
+            opacity:0;
+            height: 0;
+            padding: 0;
+
+            transition: height 0.8s, opacity 0.4s ease-in-out;
+        }
+        .bottom-end:hover div{
+          height: 2.4rem;
+
+
+          opacity:100;
+          
+          transition: height 0.8s, opacity 0.8s ease-in-out; 
+        }
+       
+        .arrow img{
+          width: max-content;
+          height: max-content;
+          width: 1.64rem;
+          margin-bottom: 0.9rem;
+        }
+
+      
+
+
+#omnie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fafafa;
+  color: #1e1e1e;
+  min-height: 100vh;
+  
+}
+
+
+.omnie-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  margin:auto;
+
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: 'Lora';
+}
+
+  .omnie-center > div{
+
+    
+    
+  }
+
+#cennik{
+  display: flex;
+  justify-content: center;
+
+  background: url("/images/cennik-tlo3.png") no-repeat center center;
+  background-size: cover;
+
+  padding-right: 10rem;
+  font-family: 'Lora';
+  color: white;
+  font-weight: 400;
+}
+
+  .cennik-leftside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+    .cennik-img{
+      width: max-content;
+      padding: 3rem;
+    }
+      .cennik-img img{
+        width: 36rem;
+      }
+
+  .cennik-rightside{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #1e1e1e3d;
+    backdrop-filter: blur(4px);
+
+  }
+
+    .cennik-title{
+      flex-direction: column;
+      margin-inline: auto;
+      margin-top: 2.8rem;
+
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+        .cennik-title img{
+          margin-top: 0.4rem;
+
+          height: 1.5rem;
+        }
+
+    .ceny{
+      display: flex;
+      flex-direction: column;
+
+      margin-top: 3rem;
+      margin-left: -0.7rem;
+      padding-right: 4rem;
+    }
+          .ceny > div{
+            
+          }
+
+      .ceny-top{
+        display: flex;
+        gap:0.6rem;
+        
+        margin: 3.7rem 0 1rem;
+      }
+          .on{
+            background-color: #236387;
+          }
+          .ona{
+            background-color: #AF4545;
+          }
+      
+            .cena-prostokat{
+              width:3.8rem;
+              height: 1.8rem;
+
+              font-size: 1.1rem;
+            }
+
+            .cena-linia{
+              width: 0.01em;
+              
+              padding: 0.1em;
+            }
+
+            .cena-nazwa{
+              font-size: 1.1rem;
+              background-color: none;
+            }
+      
+      .ceny-content{
+        display: flex;
+        justify-content: space-between;
+        width: 18rem;
+
+        margin-inline:auto;
+        padding-left: 6.3rem;
+
+        font-size: 0.74rem;
+      }
+      .ceny-content div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        gap:1.3rem;
+      }
+
+      .cena-uslugi{
+        text-align: right;
+      }
+
+
+
+
+/*background: url("/images/tlo2.jpg") no-repeat center center fixed;
+  background-size: cover;*/
+
+
+/* --------- PHONE -------- */
+
+@media only screen and (max-width:1100px){
+
+  .home-center{
+    margin-inline:auto;
+  }
+  .home-rt{
+    display: none;
+  }
+  .home-center-title{
+    text-align: center;
+    font-size: clamp(1rem, 7vw, 2.2rem);
+  }
+  .home-center-text{
+    width:100%;
+    margin-top: 4rem;
+    margin-inline: 0;
+
+    font-size: clamp(0.6rem, 8vw, 1rem);
+
+    text-shadow: -1px 1px 3px black;
+  }
+  .home-kontakt{
+    justify-content: center;
+    margin:auto;
+  }
+  .btn-kontakt{
+    margin-right:2rem;
+  }
+
+  #cennik{
+    padding: 0;
+  }
+  .cennik-leftside{
+    display: none;
+  }
+
+  .cennik{
+    justify-content: center;
+  }
+
+  /*
+    .ceny{
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+  
+      width: 100%;
+      margin: 0;
+    }
+      .ceny-top{
+        display: flex;
+        gap:0.6rem;
+        
+        margin: 2rem 0 1rem -8%;
+      }
+          .on{
+            background-color: #236387;
+          }
+          .ona{
+            background-color: #AF4545;
+          }
+      
+            .cena-prostokat{
+              width:4rem;
+              height: 2rem;
+  
+              font-size: 1.2rem;
+            }
+  
+            .cena-linia{
+              width: 0.01em;
+              
+              padding: 0.1em;
+            }
+  
+            .cena-nazwa{
+              font-size: 1.1rem;
+              background-color: none;
+            }
+      
+      .ceny-content{
+        display: flex;
+        justify-content: space-between;
+  
+        width: 56%;
+  
+        margin-inline:auto;
+        padding-left: 0.2rem;
+  
+        font-size: 0.8rem;
+      }
+      .ceny-content div{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+  
+        gap:1rem;
+      }
+  
+      .cena-uslugi{
+        text-align: right;
+      }
+*/
+}
+
